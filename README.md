@@ -1,4 +1,4 @@
-# Serenity + JUnit Test Starter
+# Serenity BDD E2E test (buy 2 items from a shop website)
 
 This repository is a project for automated E2E tests using Serenity BDD.
 
