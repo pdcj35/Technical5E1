@@ -1,25 +1,31 @@
-# Serenity JUnit Starter project
+# Serenity + JUnit Test Starter
 
-Get started quickly with Serenity BDD and JUnit 5 using Page Objects and Action Classes with this simple starter project. 
+This repository is a project for automated E2E tests using Serenity BDD.
 
-## Get the code
+Quick overview:
+- Contains an example test that use Page Objects and Action classes to add two items from `https://www.demoblaze.com/` to the cart and tehn complete the purchase.
+- Tests can be run with Gradle (or Maven), and Serenity produces HTML reports with evidence (screenshots, page sources, etc.).
 
-Click on the [Use This Template button](https://github.com/serenity-bdd/serenity-junit-starter/generate) to create a new project in your own Github account. 
+Why the project is organized this way
+- The `actions` and `pageobjects` folders are intentionally structured for scalability: reusable interactions are implemented as Actions, while selectors and page operations live in PageObjects. This makes it easy to add many more tests in the future without duplicating logic.
 
-Or simply [download a zip](https://github.com/serenity-bdd/serenity-junit-starter/archive/master.zip) file.
+Run the tests (Gradle)
+1. Open PowerShell at the project root
+2. Run:
 
-## Running the tests under Maven
+```powershell
+.\gradlew.bat test --no-daemon --stacktrace
+```
 
-The template project comes with both Maven and Gradle build scripts. To run the tests with Maven, open a command window and run:
+View reports
+- Serenity report: `target/site/serenity/index.html`
+- Gradle test report: `build/reports/tests/test/index.html`
 
-  ./mvnw clean verify
+Notes
+- `serenity.conf` is configured to capture screenshots in case of failure (useful for debugging).
+- When adding tests, put them under `src/test/java` and follow the existing `actions` + `pageobjects` pattern to keep tests maintainable and reusable.
 
-## Use Gradle
+Contributing
+- If you add tests, try to keep Actions generic and PageObjects focused on page structure so others can reuse them easily.
 
-For GRADLE, pen a command window and run:
-
-  ./gradlew test 
-
-## Viewing the reports
-
-Both of the commands provided above will produce a Serenity test report in the `target/site/serenity` directory. Go take a look!
+Enjoy working with the project.
