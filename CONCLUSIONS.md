@@ -1,4 +1,4 @@
-# Conclusions: Automated E2E Testing (Demoblaze Store)
+# Automated E2E Testing (Demoblaze Store)
 
 *Date:* May 2026 <br>
 *Target:* Add two items to cart ant place order <br>
