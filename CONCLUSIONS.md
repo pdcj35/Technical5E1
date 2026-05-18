@@ -1,11 +1,19 @@
-Conclusions
+# Conclusions: Automated E2E Testing (Demoblaze Store)
+
+*Date:* May 2026 <br>
+*Target:* Add two items to cart ant place order <br>
+*Status:* Passed
+
+---
+
+## Conclusions
 
 - This project is designed for E2E tests using Serenity BDD mainly.
 - The structure uses `actions` and `pageobjects` to allow scaling the number of tests without duplicating logic.
 - Serenity reports include screenshots for each step to help debugging.
 - Suggested next step: review and harden selectors and waits inside Actions before adding more tests.
 
-About the web:
+## About the web:
 
 - Items could be added to the cart without issues
 - The place Order form is easy to understand and complete
